@@ -2,9 +2,9 @@ import { FaStar, FaTimes } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import { FaClockRotateLeft } from "react-icons/fa6";
 
-const MealsCard = ({ meal }) => {
+const MealsCard = ({ meal, onClick }) => {
   return (
-    <div className="bg-[#F8F8F8] text-[15px] leading-8 min-w-60 min-h-90 p-5 rounded-xl">
+    <div onClick={onClick} className="bg-[#F8F8F8] text-[15px] leading-8 min-w-60 min-h-90 p-5 rounded-xl">
       <img className="min-w-50 rounded-xl" src={meal.image} alt="" />
       <p className="">{meal.name}</p>
       <p>{meal.cuisine}</p>
