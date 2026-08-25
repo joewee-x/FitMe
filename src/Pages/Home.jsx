@@ -3,6 +3,7 @@ import Nav from '../Components/Nav'
 import Hero from '../Components/Hero'
 import MealsList from '../Components/MealsList'
 import RestaurantSearch from '../Components/RestaurantSearch'
+import WhatsOnYourMind from '../Components/WhatsOnYourMind'
 
 const Home = () => {
 
@@ -27,6 +28,7 @@ const Home = () => {
       <Hero />
       <MealsList meals = {meals} />
       <RestaurantSearch />
+      <WhatsOnYourMind meals = {meals} />
     </div>
   )
 }

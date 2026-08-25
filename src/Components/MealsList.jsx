@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MealsCard from "./MealsCard";
+import WhatsOnYourMind from "./WhatsOnYourMind";
 import { FaStar, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
