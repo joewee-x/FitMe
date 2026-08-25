@@ -39,7 +39,7 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Enter your delivery location"
-              className="text-[12px] w-90 h-9 border border-[#808080] rounded px-2 outline-none"
+              className="text-[12px] min-w-full lg:min-w-100 h-9 border border-[#808080] rounded px-2 outline-none"
             />
 
             <button className="bg-black text-white w-full sm:w-25 h-9 rounded text-sm shrink-0">
