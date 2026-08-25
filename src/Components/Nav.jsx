@@ -1,14 +1,15 @@
 import Logo from '../img/Logo.png'
 import { FaSearch } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <nav className="mt-5 sm:mt-8 px-4 sm:px-8 lg:px-16 xl:px-30">
+    <nav className=" fixed min-w-full top-0 bg-white h-20 grid items-center shadow-xl px-4 sm:px-8 lg:px-16 xl:px-30">
       
       <div className="flex items-center justify-between gap-4">
         <div className="shrink-0">
-          <img className="w-16 sm:w-20" src={Logo} alt="Logo"/>
+          <Link to={'/'}><img className="w-16 sm:w-20" src={Logo} alt="Logo"/></Link>
         </div>
 
         <div className="flex items-center gap-3 sm:gap-5 flex-1 justify-end">

@@ -7,7 +7,7 @@ import img2 from "../img/img2.png";
 const Hero = () => {
   return (
     <main>
-      <div className="flex flex-col lg:flex-row mt-12 sm:mt-20 lg:mt-25 items-center gap-8 lg:gap-10">
+      <div className="flex flex-col lg:flex-row mt-20 sm:mt-20 lg:mt-35 items-center gap-8 lg:gap-10">
         <div className="shrink-0 self-start lg:self-center">
           <img className="w-20 max-sm:hidden lg:w-25" src={Union} alt="" />
         </div>

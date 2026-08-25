@@ -1,8 +1,10 @@
 import { useState } from "react";
 import MealsCard from "./MealsCard";
 import { FaStar, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const MealsList = ({ meals }) => {
+  const navigate = useNavigate();
   const [selectedMeal, setSelectedMeal] = useState(null);
 
   const nearByResataurant = meals.slice(0, 4);
@@ -50,23 +52,19 @@ const MealsList = ({ meals }) => {
       {selectedMeal && (
         <div
           className="fixed inset-0 flex items-center justify-center bg-black/60"
-          onClick={() => setSelectedMeal(null)}
-        >
+          onClick={() => setSelectedMeal(null)} >
           <div
             className="relative bg-white max-w-md w-full p-8 rounded-2xl overflow-hidden leading-10"
-            onClick={(e) => e.stopPropagation()}
-          >
+            onClick={(e) => e.stopPropagation()} >
             <button
               className="absolute right-4 top-4 hover:bg-gray-100 cursor-pointer"
-              onClick={() => setSelectedMeal(null)}
-            >
+              onClick={() => setSelectedMeal(null)}>
               <FaTimes />
             </button>
             <img
               className="w-full rounded-xl object-cover h-60"
               src={selectedMeal.image}
-              alt=""
-            />
+              alt="" />
             <p className="text-xl pt-5">{selectedMeal.name}</p>
             <p>{selectedMeal.cuisine}</p>
             <div className="flex items-center justify-between text-[12px]">
@@ -83,7 +81,8 @@ const MealsList = ({ meals }) => {
               </div>
             </div>
 
-            <button className="w-full bg-black text-white h-10 rounded-xl">View Details</button>
+            <button className="w-full bg-black text-white h-10 rounded-xl" 
+                    onClick={()=> {navigate(`/meal/${selectedMeal.id}`); setSelectedMeal(null)}}>View Details</button>
           </div>
         </div>
       )}
