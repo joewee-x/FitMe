@@ -5,6 +5,7 @@ import MealsList from '../Components/MealsList'
 import RestaurantSearch from '../Components/RestaurantSearch'
 import WhatsOnYourMind from '../Components/WhatsOnYourMind'
 import PersonalisedReccommendations from '../Components/PersonalisedReccommendations'
+import Footer from '../Components/Footer'
 
 const Home = () => {
 
@@ -31,6 +32,7 @@ const Home = () => {
       <RestaurantSearch />
       <WhatsOnYourMind meals = {meals} />
       <PersonalisedReccommendations meals ={meals} />
+      <Footer />
     </div>
   )
 }
