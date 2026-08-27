@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import Cart from './Pages/Cart';
 import './App.css'
 import MealDetails from './Pages/MealDetails';
+import SecureCheckout from './Pages/SecureCheckout';
 import { useState } from 'react';
 
 function App() {
@@ -61,8 +62,8 @@ function App() {
               increaseQuantity ={increaseQuantity}
               decreaseQuantity = {decreaseQuantity}
               removeMeal = {removeMeal}
-              
               />}/>
+              <Route path='/SecureCheckout' element ={<SecureCheckout cart = {cart}/>}/>
           </Routes>
         </main>
         <Footer />

@@ -85,7 +85,7 @@ const Cart = ({ cart, increaseQuantity, decreaseQuantity, removeMeal }) => {
                 <div className="text-sm">
 
                   <p>
-                    From{" "}
+                    From
                     <span className="text-[#FC8019]">
                       {meal.mealType}
                     </span>
@@ -139,7 +139,7 @@ const Cart = ({ cart, increaseQuantity, decreaseQuantity, removeMeal }) => {
 
             </div>
 
-            <button className=" bg-[#FC8019] text-white w-full h-10 rounded-xl ">
+            <button className=" bg-[#FC8019] text-white w-full h-10 rounded-xl" onClick={()=>navigate('/secureCheckout')}>
               Checkout
             </button>
 
