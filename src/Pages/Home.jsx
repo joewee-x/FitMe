@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Nav from '../Components/Nav'
 import Hero from '../Components/Hero'
 import MealsList from '../Components/MealsList'
 import RestaurantSearch from '../Components/RestaurantSearch'
@@ -26,7 +25,6 @@ const Home = () => {
   }, [])
   return (
     <div>
-      <Nav />
       <Hero />
       <MealsList meals = {meals} />
       <RestaurantSearch />

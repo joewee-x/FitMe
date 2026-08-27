@@ -1,24 +1,3 @@
-// import React from 'react'
-// import { GiAxeSword } from 'react-icons/gi'
-
-// const RestaurantSearch = () => {
-//   return (
-//     <div>
-//         <div className='min-w-full h-40 bg-[#FC8019] my-20 text-white flex items-center gap-3 justify-center max-sm:flex-col'>
-//             <p className='font-bold'>Search by Restaurant</p>
-//             <GiAxeSword className='text-2xl' />
-//             <input className='w-100 border border-white h-10 p-2 rounded' type="text"
-//                 placeholder='Enter item or restaurant you are looking for' />
-//             <button className='bg-black h-10 w-35 rounded'>Search Now</button>
-
-//         </div>
-
-//     </div>
-//   )
-// }
-
-// export default RestaurantSearch
-
 import { GiAxeSword } from "react-icons/gi";
 
 const RestaurantSearch = () => {

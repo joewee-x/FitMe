@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = ({cartCount}) => {
   return (
     <nav className=" fixed min-w-full top-0 bg-white h-20 grid items-center shadow-xl px-4 sm:px-8 lg:px-16 xl:px-30">
       
@@ -19,8 +19,14 @@ const Nav = () => {
             <FaSearch className="rotate-90 text-[#808080] shrink-0" />
           </div>
 
-          <FiShoppingBag className="text-xl sm:text-2xl shrink-0" />
+          <Link to='/cart'>
+            <FiShoppingBag className="text-xl sm:text-2xl shrink-0" />
 
+            {cartCount > 0 && (
+              <span className="absolute top-4 right-56 bg-red-500 text-white text-[10px] w-4
+              h-4 rounded-full flex items-center justify-center"> {cartCount}</span>
+            )}
+          </Link>
           <button className="bg-black text-white w-20 h-8 rounded text-sm shrink-0">
             Sign In
           </button>

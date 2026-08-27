@@ -7,7 +7,7 @@ import { FiClock } from "react-icons/fi";
 
 
 
-const MealDetails = () => {
+const MealDetails = ( {addToCart}) => {
     const {id} = useParams();
     const [meal, setMeal] = useState(null);
 
@@ -27,9 +27,13 @@ const MealDetails = () => {
     if(!meal){
         return <p>Loading...</p>
     }
+
+    const handleAddToCart = ()=> {
+        addToCart(meal)
+    }
   return (
     <>
-    <Nav />
+    
     <main>
       <div>
         <div  className='grid grid-cols-1 justify-center md:grid-cols-2 gap-10 mt-30 md:mt-40 mx-5 md:mx-30'>
@@ -57,7 +61,9 @@ const MealDetails = () => {
                         ))}
                     </ul>
                 </div>
-                <button className='mt-2 bg-black w-full md:w-90 h-8 rounded text-white'>Add to cart</button>
+                <button className='mt-2 bg-black w-full md:w-90 h-8 rounded text-white' onClick={handleAddToCart}>
+                    Add to cart
+                </button>
             </div>
             
         </div>
