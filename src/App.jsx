@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Nav from './Components/Nav'
+import Login from './Components/Login';
 import Footer from './Components/Footer'
 import Home from './Pages/Home';
 import Cart from './Pages/Cart';
@@ -10,6 +11,13 @@ import { useState } from 'react';
 
 function App() {
   const [cart, setCart] = useState([])
+   const [user, setUser] = useState(null)
+  const [showLogin, setShowLogin] = useState(false)
+
+  const handleLogin = (userDetails) => {
+    setUser(userDetails)
+    setShowLogin(false)
+  }
 
   const addToCart = (meal)=> {
     setCart(cart => {
@@ -51,7 +59,14 @@ function App() {
     <>
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
-        <Nav cartCount = {cartCount} />
+        <Nav cartCount = {cartCount} user={user} setShowLogin={setShowLogin} />
+        {showLogin && (
+        <Login
+          handleLogin={handleLogin}
+          setShowLogin={setShowLogin}
+        />
+      )}
+
 
         <main className='flex-1'>
           <Routes>
