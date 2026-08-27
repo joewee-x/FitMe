@@ -4,14 +4,12 @@ import { FaAppleWhole, FaFacebookF } from "react-icons/fa6"
 
 const Login = ({ handleLogin, setShowLogin }) => {
 
-  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
     handleLogin({
-      name: name,
       email: email
     })
   }
@@ -38,8 +36,7 @@ const Login = ({ handleLogin, setShowLogin }) => {
 
         <form
           onSubmit={handleSubmit}
-          className="space-y-4"
-        >
+          className="space-y-4">
 
           <input type="email" placeholder="Your email" value={email} onChange={(e) => setEmail(e.target.value)} required
             className="w-fullh-10 border rounded-lg px-3 outline-none"/>
@@ -72,6 +69,7 @@ const Login = ({ handleLogin, setShowLogin }) => {
                 </button>
             </div>
         </div>
+
 
       </div>
 
