@@ -55,7 +55,7 @@ const MealsList = ({ meals }) => {
           className="fixed inset-0 flex items-center justify-center bg-black/60"
           onClick={() => setSelectedMeal(null)} >
           <div
-            className="relative bg-white max-w-md w-full p-8 rounded-2xl overflow-hidden leading-10"
+            className="relative bg-white max-w-md max-sm:mx-3 w-full p-8 rounded-2xl overflow-hidden leading-10"
             onClick={(e) => e.stopPropagation()} >
             <button
               className="absolute right-4 top-4 hover:bg-gray-100 cursor-pointer"
