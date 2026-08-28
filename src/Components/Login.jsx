@@ -39,7 +39,7 @@ const Login = ({ handleLogin, setShowLogin }) => {
           className="space-y-4">
 
           <input type="email" placeholder="Your email" value={email} onChange={(e) => setEmail(e.target.value)} required
-            className="w-fullh-10 border rounded-lg px-3 outline-none"/>
+            className="w-full h-10 border rounded-lg px-3 outline-none"/>
 
           <button type="submit" className=" bg-[#0057FF] text-white w-full h-10 rounded-lg">
             Sign In
