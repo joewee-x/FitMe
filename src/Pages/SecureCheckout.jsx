@@ -404,6 +404,7 @@ const SecureCheckout = ({ cart }) => {
 
             <button
               className="mt-6 w-full h-11 bg-[#FC8019] text-white rounded-lg text-sm hover:bg-[#e9700c] transition"
+              onClick={()=> alert('Order placed successfully')}
             >
               Proceed To Payment
             </button>
