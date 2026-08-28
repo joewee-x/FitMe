@@ -11,8 +11,9 @@ import { useState } from 'react';
 
 function App() {
   const [cart, setCart] = useState([])
-   const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null)
   const [showLogin, setShowLogin] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('')
 
   const handleLogin = (userDetails) => {
     setUser(userDetails)
@@ -59,7 +60,9 @@ function App() {
     <>
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
-        <Nav cartCount = {cartCount} user={user} setShowLogin={setShowLogin} />
+        <Nav cartCount = {cartCount} user={user} setShowLogin={setShowLogin}
+          searchTerm ={searchTerm} setSearchTerm = {setSearchTerm}
+        />
         {showLogin && (
         <Login
           handleLogin={handleLogin}
@@ -70,7 +73,7 @@ function App() {
 
         <main className='flex-1'>
           <Routes>
-            <Route path='/' element = {<Home />}/>
+            <Route path='/' element = {<Home searchTerm = {searchTerm} />}/>
             <Route path='/meal/:id' element = {<MealDetails addToCart = {addToCart} />} />
             <Route path='/Cart' element = {<Cart
               cart  = {cart}

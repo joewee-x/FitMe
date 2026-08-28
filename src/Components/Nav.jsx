@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import { FiShoppingBag } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 
-const Nav = ({cartCount, user, setShowLogin}) => {
+const Nav = ({cartCount, user, setShowLogin, searchTerm, setSearchTerm}) => {
   return (
     <nav className=" fixed min-w-full top-0 bg-white h-20 grid items-center shadow-xl px-4 sm:px-8 lg:px-16 xl:px-30">
       
@@ -15,10 +15,11 @@ const Nav = ({cartCount, user, setShowLogin}) => {
         <div className="flex items-center gap-3 sm:gap-5 flex-1 justify-end">
 
           <div className="flex items-center border border-[#808080] rounded px-2 w-full max-w-90">
-            <input type="text" placeholder="Enter item or restaurant you are looking for" className="text-[12px] w-full h-8 outline-none"/>
+            <input type="text" placeholder="Enter item or restaurant you are looking for" className="text-[12px] w-full h-8 outline-none"
+              value={searchTerm} onChange={(e)=> {setSearchTerm(e.target.value)}}
+            />
             <FaSearch className="rotate-90 text-[#808080] shrink-0" />
           </div>
-
           <Link to='/cart'>
             <FiShoppingBag className="text-xl sm:text-2xl shrink-0" />
 

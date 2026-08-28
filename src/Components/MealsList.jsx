@@ -4,7 +4,7 @@ import WhatsOnYourMind from "./WhatsOnYourMind";
 import { FaStar, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const MealsList = ({ meals }) => {
+const MealsList = ({ meals, filteredMeals, searchTerm  }) => {
   const navigate = useNavigate();
   const [selectedMeal, setSelectedMeal] = useState(null);
 

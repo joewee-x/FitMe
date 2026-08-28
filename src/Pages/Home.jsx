@@ -5,7 +5,7 @@ import RestaurantSearch from '../Components/RestaurantSearch'
 import WhatsOnYourMind from '../Components/WhatsOnYourMind'
 import PersonalisedReccommendations from '../Components/PersonalisedReccommendations'
 
-const Home = () => {
+const Home = ({searchTerm}) => {
 
   const [meals, setMeals] = useState([])
 
@@ -21,11 +21,13 @@ const Home = () => {
       
     }
     getMeals()
-  }, [])
+  }, []);
+
+  const filteredMeals = meals.filter((meal) => meal.name.toLowerCase().includes(searchTerm.toLowerCase()))
   return (
     <div>
       <Hero />
-      <MealsList meals = {meals} />
+      <MealsList meals = {meals} meals ={filteredMeals} searchTerm = {searchTerm} />
       <RestaurantSearch />
       <WhatsOnYourMind meals = {meals} />
       <PersonalisedReccommendations meals ={meals} />
